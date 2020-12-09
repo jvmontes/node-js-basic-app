@@ -24,3 +24,13 @@ I will build something I am proud of for myself, but also for future generations
 
 ## references
 None of us get here on our own. Through various online "Work From Home" and "Bootcamp" programs I stumbled upon, I eventually came across [GeekPack](https://www.geekpack.co/free-5-day-coding-challenge). This is a course that's great for beginners, people who have very little coding experience can easily get up and running quickly just by learning some of the basics, and essentially learning how to build sites as a freelance developer for clients. 
+
+## tools
+If you're completely new to software development, don't worry. I've got you covered. 
+
+### version control
+Here is a [great article](https://ourcodingclub.github.io/tutorials/git/) that covers the basics of using Github (the site you're on) and version control. 
+I also like to use [SourceTree](https://www.sourcetreeapp.com/) to easily view my file changes, on top of using my computer's built in Terminal. 
+
+### ide (integrated development environment)
+Since I'm building a webapp and my stack will mainly stay in the JavaScript world, I'm using [Visual Studio Code](https://code.visualstudio.com/). It's just a really pretty place for me to put all the files I'm working on (which you can view up there ^) and integrates nicely with different languages, as it highlights stuff in pretty colors. 

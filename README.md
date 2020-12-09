@@ -21,3 +21,6 @@ I will build integrations to my other media accounts, where I express myself cre
 I will create an organized, documented resource as I build my digital tools using code. 
 
 I will build something I am proud of for myself, but also for future generations.
+
+## references
+None of us get here on our own. Through various online "Work From Home" and "Bootcamp" programs I stumbled upon, I eventually came across [GeekPack](https://www.geekpack.co/free-5-day-coding-challenge). This is a course that's great for beginners, people who have very little coding experience can easily get up and running quickly just by learning some of the basics, and essentially learning how to build sites as a freelance developer for clients. 

@@ -5,13 +5,15 @@ var languageStrings = [
     }
 ]
 
-var languageCodes = [
+var copyArray = [
     {
-        code: "en",
-        name: "English"
+        "key": "who-am-i-1",
+        "en-copy": "My name is Jorge Viramontes. I am a first-generation college student. I am also a first-generation American citizen, born of Mexican immigrant parents.",
+        "sp-copy": "Mi nombre es Jorge Viramontes. Soy la primera generacion de mi familia de atender a la universidad. Tambien soy la primera generacion americana de mi familia, nacido de padres imigrantes de México."
     }, {
-        code: "es",
-        name: "Spanish"
+        "key": "who-am-i-2",
+        "en-copy": "test2",
+        "sp-copy": "prueba2"
     }
 ]
 
@@ -25,22 +27,22 @@ var languageTranslator = function({
 } = {}) {
     const root = document.documentElement;
 
+    var copyDictionary = {};
+
+    copyArray.forEach(copyItem => {
+        copyDictionary[copyItem.key] = {
+            enCopy: copyItem["en-copy"],
+            spCopy: copyItem["sp-copy"]
+        }
+    })
+
+    console.log("copy dictionary - ", copyDictionary);
+
     var listOfLanguages = Object.keys(languages[0]);
     currentLanguage = chosenLanguage;
 
     (function createLanguageDropdown() {
         var languageDropdown = document.getElementById(dropdownId);
-        languageDropdown.innerHTML = "";
-
-        listOfLanguages.forEach((language, languageIndex) => {
-            let htmlOption = document.createElement("option");
-            htmlOption.value = language;
-            htmlOption.textContent = language;
-            languageDropdown.appendChild(htmlOption);
-            if (language == chosenLanguage) {
-                languageDropdown.value = language;
-            }
-        });
 
         languageDropdown.addEventListener("change", function(e) {
             currentLanguage = languageDropdown[languageDropdown.selectedIndex].value;

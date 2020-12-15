@@ -1,18 +1,23 @@
-var languageStrings = [
-    {
-        English: "My name is Jorge Viramontes. I am a first-generation college student. I am also a first-generation American citizen, born of Mexican immigrant parents.",
-        Spanish: "Mi nombre es Jorge Viramontes. Soy la primera generacion de mi familia de atender a la universidad. Tambien soy la primera generacion americana de mi familia, nacido de padres imigrantes de México."
-    }
-]
-
 var copyDictionary = {
+    welcome_header: {
+        en_copy: "Welcome to My Portfolio",
+        sp_copy: "Bienvenido a mi Portafolio"
+    },
+    who_am_i_link: {
+        en_copy: "Who am I?",
+        sp_copy: "¿Quién soy?"
+    },
+    who_am_i_header: {
+        en_copy: "Who am I?",
+        sp_copy: "¿Quién soy?"
+    },
     who_am_i_1: {
         en_copy: "My name is Jorge Viramontes. I am a first-generation college student. I am also a first-generation American citizen, born of Mexican immigrant parents.",
-        sp_copy: "Mi nombre es Jorge Viramontes. Soy la primera generacion de mi familia de atender a la universidad. Tambien soy la primera generacion americana de mi familia, nacido de padres imigrantes de México."
+        sp_copy: "Mi nombre es Jorge Viramontes. Soy un estudiante universitario de primera generación. También soy un ciudadano estadounidense de primera generación, nacido de padres inmigrantes mexicanos."
     },
     who_am_i_2: {
-        en_copy: "test2",
-        sp_copy: "prueba2"
+        en_copy: "I am a University of Michigan graduate with a Bachelors of Science in Computational Informatics, with a minor in entrepreneurship.",
+        sp_copy: "Soy un graduado de la Universidad de Michigan con una Licenciatura en Informática Computacional, con una especialización en emprendimiento."
     }
 }
 
@@ -20,14 +25,11 @@ var currentLanguage;
 
 var languageTranslator = function({
     dropdownId = "jvLanguageSelector",
-    stringAttribute = "data-jv-text",
-    chosenLanguage = "English",
+    defaultLanguage = "English",
 } = {}) {
     const root = document.documentElement;
 
-    console.log("copy dictionary - ", copyDictionary);
-
-    currentLanguage = chosenLanguage;
+    currentLanguage = defaultLanguage;
 
     (function createLanguageDropdown() {
         var languageDropdown = document.getElementById(dropdownId);
@@ -38,30 +40,27 @@ var languageTranslator = function({
     })();
 
     function resolveAllLanguageStrings() {
-        let stringsToBeResolved = document.querySelectorAll(`[${stringAttribute}]`);
-        stringsToBeResolved.forEach(stringToBeResolved => {
-            let originalText = stringToBeResolved.textContent;
-            let resolvedText = resolveString(originalText, languageStrings);
-            stringToBeResolved.textContent = resolvedText;
-        });
+
+        for(var key in copyDictionary) {
+            //find string in HTML by key
+            let stringToTranslate = document.querySelector(`#${key}`);
+
+            //replace text content based on language
+            switch (currentLanguage) {
+                case "English":
+                    stringToTranslate.textContent = copyDictionary[key].en_copy;
+                    break;
+                case "Spanish":
+                    stringToTranslate.textContent = copyDictionary[key].sp_copy;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 };
 
-function resolveString(originalText, languageStrings) {
-    var matchingStringIndex = languageStrings.find(function(stringObj) {
-        let stringValues = Object.values(stringObj);
-        return stringValues.includes(originalText);
-    });
-    if (matchingStringIndex) {
-        return matchingStringIndex[currentLanguage];
-    } else {
-        return originalText;
-    }
-}
-
 languageTranslator({
     dropdownId: "jvLanguageSelector",
-    stringAttribute: "data-jv-text",
-    chosenLanguage: "English",
-    languages: languageStrings,
+    defaultLanguage: "English",
 })

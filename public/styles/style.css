@@ -1,0 +1,41 @@
+h1 {
+    font-size: 40px;
+    color: blue;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background: #231f20;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+    float: left;
+}
+
+#navigation {
+    float: right;
+    margin-top: 18px;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: blanchedalmond;
+    padding: 20px;
+}
+
+#navigation a:hover {
+    color: cadetblue;
+}
+
+

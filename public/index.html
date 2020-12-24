@@ -3,24 +3,26 @@
     <head>
         <meta charset="UtF-8">
         <title>Jorge's Portfolio</title>
+        <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
             <nav>
-                <div>
+                <div class="logo">
                     <a href="https://geekpack.co" target="_blank"><img src="images/geekpack.png" alt="GeekPack logo">
                     </a>
                 </div>
-                <div>
-                    <a href="index.html">HOME</a>
-                    <a href="about.html">ABOUT</a>
-                </div>
-                <div>
+                <div id="navigation">
                     <select id="jvLanguageSelector">
                         <option value="English">English</option>
                         <option value="Spanish">Spanish</option>
                     </select>
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
                 </div>
             </nav>
         </header>
@@ -58,7 +60,7 @@
         </div>
 
         <footer>
-            <a href="https://www.geekpack.co"><img src="images/geekpack.png" alt="GeekPack logo"/></a>
+            <!-- <a href="https://www.geekpack.co"><img src="images/geekpack.png" alt="GeekPack logo"/></a> -->
             <p>Copyright 2020 | All Rights Reserved</p>
         </footer>
 

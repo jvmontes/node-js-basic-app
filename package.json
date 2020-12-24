@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A custom built web app to host my personal portfolio.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvmontes/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "MERN",
+    "node.js"
+  ],
+  "author": "Jorge Viramontes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvmontes/portfolio/issues"
+  },
+  "homepage": "https://github.com/jvmontes/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

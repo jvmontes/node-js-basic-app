@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UtF-8">
         <title>Jorge's Portfolio</title>
-        <link href="styles/style.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <%- include('../partials/_head'); -%>
     </head>
 
     <body>
         <header>
-            <%- include('../partials/header'); -%>
+            <%- include('../partials/_header'); -%>
         </header>
 
-        <div>
+        <div id="main-content">
             <h1 id="welcome_header">Welcome to My Portfolio</h1>
             <nav>
                 <a id="who_am_i_link" href="$introduction">Who am I?</a>
@@ -22,33 +18,27 @@
                 <a href="$goals">Future Goals</a>
                 <a href="$purpose">Project Purpose</a>
             </nav>
-        </div>
 
-        <div>
             <h2 id="who_am_i_header">Who am I?</h2>
             <p>My name is <%= name %></p>
             <p id="who_am_i_1">My name is Jorge Viramontes. I am a first-generation college student. I am also a first-generation American citizen, born of Mexican immigrant parents.</p>
             <p id="who_am_i_2">I am a University of Michigan graduate with a Bachelors of Science in Computational Informatics, with a minor in entrepreneurship.</p>
-        </div>
 
-        <div>
             <h2>Past Experience</h2>
             <p>My name is Jorge Viramontes. I am a first-generation college student. I am also a first-generation American citizen, born of Mexican immigrant parents.</p>
             <p>I am a University of Michigan graduate with a Bachelors of Science in Computational Informatics, with a minor in entrepreneurship.</p>
-        </div>
 
-        <div>
             <h2>Future Goals</h2>
             <p></p>
-        </div>
 
-        <div>
             <h2>Project Purpose</h2>
             <p></p>
         </div>
 
         <footer>
-            <!-- <a href="https://www.geekpack.co"><img src="images/geekpack.png" alt="GeekPack logo"/></a> -->
+            <div class="logo">
+                <a href="https://www.geekpack.co"><img src="images/geekpack.png" alt="GeekPack logo"/></a>
+            </div>
             <p>Copyright 2020 | All Rights Reserved</p>
         </footer>
 

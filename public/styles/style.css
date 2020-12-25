@@ -11,6 +11,10 @@ header {
     background: #231f20;
 }
 
+#main-content {
+    margin-left: 10px;
+}
+
 nav {
     max-width: 1200px;
     margin: 0 auto;

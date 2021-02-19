@@ -45,3 +45,12 @@ I'm really happy with where I've left this project at for now. Here's a summary 
 - The simple express server serves both pages, and includes a bit of ejs, where we are able to easily create javascript templates. https://ejs.co/
 - nodemon developer integration. I've added nodemon which allows me to reload the express app automatically whenever it detects changes. It's made the iterative process a lot easier to deal with. https://nodemon.io/
 - I also created a homegrown solution for a translator button. I basically store all my copy in some dictionaries and switch based off of the selected language. Could write some unit tests for this, but I'm not married to a development framework, yet. So that's still in the backlog. 
+
+### current state screenshots
+
+#### desktop view
+![web app screenshot 1](./public/screenshots/web-screenshot-first-half.png)
+![web app screenshot 2](./public/screenshots/web-screenshot-second-half.png)
+
+#### mobile view
+![mobile screenshot](./public/screenshots/mobile-screenshot.png)

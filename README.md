@@ -34,3 +34,14 @@ I also like to use [SourceTree](https://www.sourcetreeapp.com/) to easily view m
 
 ### ide (integrated development environment)
 Since I'm building a webapp and my stack will mainly stay in the JavaScript world, I'm using [Visual Studio Code](https://code.visualstudio.com/). It's just a really pretty place for me to put all the files I'm working on (which you can view up there ^) and integrates nicely with different languages, as it highlights stuff in pretty colors. 
+
+### current state of the app
+Okay, I. Am. Back. 
+
+I took a bit of a break to take care of some life things. But, I am back. And I am better than ever.
+
+I'm really happy with where I've left this project at for now. Here's a summary of everything on here:
+- added an express server running on node.js. Using this, I've been able to serve different pages. There is a Home Page and an About Page. https://nodejs.org/en/ 
+- The simple express server serves both pages, and includes a bit of ejs, where we are able to easily create javascript templates. https://ejs.co/
+- nodemon developer integration. I've added nodemon which allows me to reload the express app automatically whenever it detects changes. It's made the iterative process a lot easier to deal with. https://nodemon.io/
+- I also created a homegrown solution for a translator button. I basically store all my copy in some dictionaries and switch based off of the selected language. Could write some unit tests for this, but I'm not married to a development framework, yet. So that's still in the backlog. 

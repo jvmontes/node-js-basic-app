@@ -1,9 +1,14 @@
+// Define constants
+const APP_PORT = 8080;
+
 // Load modules
 var express = require('express');
 const ejs = require('ejs');
 
 // Initialize Express
 var app = express();
+
+console.log("Server is running! http://localhost:" + APP_PORT);
 
 // Render static files
 app.use(express.static('public'));
@@ -12,7 +17,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // Port website will run on
-app.listen(8080);
+app.listen(APP_PORT);
 
 // *** GET Routes - display pages ***
 
